@@ -1,0 +1,146 @@
+@mixin side-sheet-header() {
+  min-height: 94px;
+  padding: 0 32px;
+}
+
+@mixin side-sheet-header-close() {
+  min-width: 44px;
+  height: 44px;
+}
+
+@mixin side-sheet-footer() {
+  padding: 32px;
+}
+
+@mixin side-sheet-footer-action() {
+  gap: 8px;
+}
+
+@mixin side-sheet-guide-image() {
+  height: 513px;
+  margin-bottom: 32px;
+}
+
+@mixin side-sheet-guide-image() {
+  height: 513px;
+  margin-bottom: 32px;
+}
+
+@mixin side-sheet-guide-text() {
+  padding: 0 36px;
+  margin-bottom: 20px;
+  white-space: pre-wrap;
+}
+
+@mixin side-sheet-guide-list() {
+  list-style: decimal;
+  padding-inline-start: 28px;
+}
+
+@mixin side-sheet-guide-container() {
+  padding: 0 36px;
+}
+
+@mixin side-sheet-guide-label() {
+  margin-bottom: 8px;
+}
+
+@mixin side-sheet-guide-radio-group() {
+  gap: 24px;
+}
+
+@mixin side-sheet-guide-input-group() {
+  gap: 16px;
+}
+
+@mixin side-sheet-fade-left() {
+  .side-sheet-fade-left-enter-active,
+  .side-sheet-fade-left-leave-active {
+    transition: all 0.15s ease-out;
+  }
+
+  .side-sheet-fade-left-leave-to {
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+  .side-sheet-fade-left-enter-from {
+    transform: translateX(10vw);
+    opacity: 0;
+  }
+}
+
+@mixin sheet-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 11;
+  background-color: rgba(#000, 0.64);
+  transition: opacity 0.3s ease-out;
+}
+
+.side-sheet-header {
+  @include side-sheet-header();
+
+  &__close {
+    @include side-sheet-header-close();
+  }
+}
+
+.side-sheet-footer {
+  @include side-sheet-footer();
+
+  &__action {
+    @include side-sheet-footer-action();
+  }
+}
+
+.side-sheet-step {
+  &__guide-image {
+    @include side-sheet-guide-image();
+  }
+
+  &__guide-text {
+    @include side-sheet-guide-text();
+  }
+
+  &__guide-list {
+    @include side-sheet-guide-list();
+  }
+
+  &__guide-input {
+    @include side-sheet-guide-container();
+  }
+
+  &__guide-label-radio {
+    @include side-sheet-guide-container();
+  }
+
+  &__guide-label-input {
+    @include side-sheet-guide-container();
+  }
+
+  &__guide-label {
+    @include side-sheet-guide-label();
+  }
+
+  &__guide-radio-group {
+    @include side-sheet-guide-radio-group();
+  }
+
+  &__guide-select-label {
+    @include side-sheet-guide-container();
+  }
+
+  &__guide-input-group {
+    gap: 16px;
+  }
+}
+
+.sheet-backdrop {
+  @include sheet-backdrop();
+}
+
+@include side-sheet-fade-left();

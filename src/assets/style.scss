@@ -1,0 +1,204 @@
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  margin-right: calc(-1 * (100vw - 100%)) !important;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden !important;
+  background-color: #000000;
+}
+
+// Reset defaults
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  // scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img,
+video {
+  height: 100%;
+  max-width: 100%;
+}
+
+iframe {
+  height: 100%;
+  width: 100%;
+}
+
+input {
+  font-variant-ligatures: none;
+  font-variant-numeric: tabular-nums;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  font-family: inherit;
+  color: inherit;
+
+  &:visited {
+    color: inherit;
+  }
+}
+
+svg {
+  display: flex;
+}
+
+// Utils classes
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.overflow-sroll {
+  overflow: scroll;
+}
+
+.overflow-x-sroll {
+  overflow-x: scroll;
+}
+
+.overflow-y-sroll {
+  overflow-y: scroll;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.readonly {
+  pointer-events: none;
+}
+
+.full-width {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.full-height {
+  height: 100% !important;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.object-contain {
+  object-fit: contain;
+}
+
+// Flexbox
+
+.flex {
+  display: flex;
+
+  &_around {
+    justify-content: space-around;
+  }
+
+  &_between {
+    justify-content: space-between;
+  }
+
+  &_evenly {
+    justify-content: space-evenly;
+  }
+
+  &_start {
+    justify-content: flex-start;
+  }
+
+  &_end {
+    justify-content: flex-end;
+  }
+
+  &_justify-center {
+    justify-content: center;
+  }
+
+  &_baseline {
+    align-items: baseline;
+  }
+
+  &_center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_align-self-center {
+    align-self: center;
+  }
+
+  &_align-self-start {
+    align-self: flex-start;
+  }
+
+  &_align-self-end {
+    align-self: flex-end;
+  }
+
+  &_align-center {
+    align-items: center;
+  }
+
+  &_align-start {
+    align-items: flex-start;
+  }
+
+  &_align-end {
+    align-items: flex-end;
+  }
+
+  &_wrap {
+    flex-wrap: wrap;
+  }
+
+  &_column {
+    flex-direction: column;
+  }
+
+  &_column-reverse {
+    flex-direction: column-reverse;
+  }
+
+  &_row {
+    flex-direction: row;
+  }
+
+  &_row-reverse {
+    flex-direction: row-reverse;
+  }
+}
